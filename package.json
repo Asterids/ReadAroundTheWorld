@@ -1,0 +1,19 @@
+{
+  "name": "grandreads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asterids/grandreads.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asterids/grandreads/issues"
+  },
+  "homepage": "https://github.com/Asterids/grandreads#readme"
+}
