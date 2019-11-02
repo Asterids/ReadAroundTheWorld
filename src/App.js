@@ -6,19 +6,29 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          Read Around the World Book Search
       </header>
+      <div className="App-main">
+        <p>Herro, I am Main!!</p>
+        <br />
+        <section className="components">
+          <div id="search">
+            <input type="search" name="placeNameInput" placeholder="Search for a place..." />
+            <br />
+            <button type="submit" name="searchButton">Search</button>
+          </div>
+          <br />
+          <div id="bookList">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
