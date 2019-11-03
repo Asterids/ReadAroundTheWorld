@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -8,13 +13,56 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 10vh;
+  width: 100vw;
   display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  align-self: flex-start;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-top: 48px;
+}
+
+.components {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  margin-right: 15px;
+  border: 1px solid black;
+}
+
+#bookList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  border: 1px solid black;
 }
 
 .App-link {
