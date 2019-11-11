@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 
-export default class BookList extends Component {
-  constructor(props) {
-    super(props)
-  }
+const BookList = (props) => {
 
-  render () {
-    return (
-      <div id="bookList">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    );
-  }
+  const books = props.books;
+  const urlDomain = "https://www.mappit.net";
+
+  books.forEach(function(book) {
+    book.url = urlDomain + book.url;
+  });
+
+  return (
+    <div id="bookList">
+      <ul>
+        {
+          books && books.map(book => (
+            <li key={book.title}><b>"<a href={book.url} target="_blank">{book.title}</a>"</b> <br /> by {book.author}</li>
+          ))
+        }
+      </ul>
+    </div>
+  );
 }
+
+export default BookList;
