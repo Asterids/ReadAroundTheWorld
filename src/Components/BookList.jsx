@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const BookList = (props) => {
 
-  const books = props.books;
+  const { books } = props;
   const urlDomain = "https://www.mappit.net";
 
   books.forEach(function(book) {
