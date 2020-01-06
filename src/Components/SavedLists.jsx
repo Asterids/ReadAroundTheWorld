@@ -4,9 +4,6 @@ const SavedLists = (props) => {
 
   let sidebarClasses = props.active ? 'savedList active' : 'savedList';
 
-  console.log("PROPS: ")
-  console.log(props)
-
   return (
     <div className={sidebarClasses}>
       <div id="savedListHeader">
