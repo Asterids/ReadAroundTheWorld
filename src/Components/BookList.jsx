@@ -11,6 +11,9 @@ const BookList = (props) => {
 
   return (
     <div id="bookList">
+      <div id="bookListHeader">
+        <h3>Books Set In This Location:</h3>
+      </div>
       <ul>
         {
           books && books.map(book => (

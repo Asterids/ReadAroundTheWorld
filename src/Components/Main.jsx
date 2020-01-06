@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchSection from './SearchSection.jsx';
 import BookList from './BookList.jsx';
+import SavedLists from './SavedLists.jsx';
 import axios from 'axios';
 
 
@@ -9,6 +10,7 @@ export default class Main extends Component {
     super(props)
 
     this.state = {
+      sidebarActive: false,
       booksFound: [
         {
         url: "/bookmap/books/265/sense-and-sensibility/",
@@ -44,9 +46,22 @@ export default class Main extends Component {
         url: "/bookmap/books/10805/nightmare-in-shining-armor/",
         title: "Nightmare in Shining Armor",
         author: "Tamar Myers"
+        },
+        {
+        url: "/bookmap/books/10805/nightmare-in-shining-armor/",
+        title: "Overflow Book #1",
+        author: "Overflow Author"
         }
       ]
     }
+
+    this.toggleSidebar = this.toggleSidebar.bind(this);
+  }
+
+  toggleSidebar() {
+    this.setState({
+      sidebarActive: !this.state.sidebarActive
+    })
   }
 
 // STEP 1: Call Geocoding API to transform user input into lat/long coordinates
@@ -79,13 +94,13 @@ export default class Main extends Component {
   render () {
     return (
       <div className="App-main">
-        <p>Use this tool to find books that are set in a particular place in the world.</p>
-        <br />
+        <button className="burgerMenu" onClick={this.toggleSidebar}>My Book Lists</button>
         <section className="components">
           <SearchSection submitSearchText={this.submitSearchText} />
           <br />
           <BookList books={this.state.booksFound} />
         </section>
+        <SavedLists active={this.state.sidebarActive} />
       </div>
     );
   }
