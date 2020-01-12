@@ -1,10 +1,10 @@
 .App {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: #474147;
 }
 
 .App-logo {
@@ -12,7 +12,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #242124;
   height: 10vh;
   width: 100vw;
   display: flex;
@@ -25,17 +25,55 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 1;
 }
 
 .App-main {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 75%;
+  background-color: #B6AEB6;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  margin-top: 48px;
+  transform: translateY(5vh);
+}
+
+a {
+  color: #214a32;
+}
+
+a:visited {
+  color: #6da384;
+}
+
+.burgerMenu {
+  position: fixed;
+  top: 55px;
+  right: 18px;
+  width: 70px;
+  height: 45px;
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.savedList {
+  position: absolute;
+  width: 28vw;
+  height: 100%;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding: 0;
+  background-color: white;
+  transform: translateX(110%);
+  transition: transform 0.3s ease-out;
+}
+
+.active {
+  transform: translateX(0);
 }
 
 .components {
@@ -48,28 +86,85 @@
 
 #search {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   width: 30%;
-  margin-right: 15px;
-  border: 1px solid black;
+  margin-right: 25px;
+}
+
+.searchInputs {
+  width: 100%;
+  height: 100px;
+  background-color: #EAE4EA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  margin: 0 0 25px 0;
+  border-radius: 2px;
+}
+
+.placeNameInput {
+  width: 85%;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+.searchButton {
+  width: 30%;
+  height: 28px;
+  font-size: 18px;
+  align-self: center;
+  border-radius: 3px;
+}
+
+.recentSearches {
+  display: flex;
+  flex-direction: column;
+  background-color: #EAE4EA;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+  border-radius: 2px;
+  overflow: scroll;
+}
+
+.recentSearches ol {
+  margin: 0;
+}
+
+ol li {
+  padding: 10px 0;
 }
 
 #bookList {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #EAE4EA;
   height: 100%;
-  width: 50%;
-  border: 1px solid black;
+  width: 45%;
+  border-radius: 2px;
+  overflow: scroll;
+}
+
+#bookListHeader {
+  height: 10%;
+  width: 100%;
+  position: relative;
 }
 
 ul {
+  height: 100%;
+  padding: 20px;
   list-style-type: none;
 }
 
-li {
+ul li {
   padding: 15px 0;
 }
 

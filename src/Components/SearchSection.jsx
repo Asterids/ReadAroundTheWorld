@@ -9,9 +9,21 @@ export default class SearchSection extends Component {
   render () {
     return (
       <div id="search">
-        <input type="search" name="placeNameInput" placeholder="Enter a country, city, or town..." />
-        <br />
-        <button type="submit" name="searchButton">Search</button>
+        <div className="searchInputs">
+          <input type="search" className="placeNameInput" name="placeNameInput" placeholder="Enter a city or town..." />
+          <br />
+          <button type="submit" className="searchButton" name="searchButton">Search</button>
+        </div>
+        <div className="recentSearches">
+          <h3>Recent Searches</h3>
+          <ol>
+            <li>Hamburg, Germany</li>
+            <li>Beirut, Lebanon</li>
+            <li>Sao Paolo, Brazil</li>
+            <li>Punta Cana, Dominican Republic</li>
+            <li>Nashville, Tenessee</li>
+          </ol>
+        </div>
       </div>
     );
   }
