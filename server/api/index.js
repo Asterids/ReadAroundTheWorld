@@ -1,10 +1,9 @@
 const router = require('express').Router();
 
-// router.use('./geocoding', require('./geocoding'));
-router.use('/books', require('./books'));
+router.use('/getBooks', require('./getBooks'));
 
 router.use((req, res, next) => {
-  const err = new Error('Not found.');
+  const err = new Error('404 Not found.');
   err.status = 404;
   next(err);
 })
