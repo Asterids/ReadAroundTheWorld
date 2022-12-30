@@ -25,7 +25,7 @@
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "css-loader": "^3.2.0",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "nodemon": "^1.19.4",
     "style-loader": "^1.0.0",
     "typescript": "^3.6.4",
